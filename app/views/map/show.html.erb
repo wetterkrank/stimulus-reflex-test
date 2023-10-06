@@ -1,0 +1,16 @@
+<label for="name">Space Name:</label>
+<input
+  type="text"
+  id="space-name"
+  name="space-name"
+  data-reflex="input->search#capitalize"
+>
+<div id="search-term">
+  ...
+</div>
+
+<%= cable_ready_stream_from(session.id) %>
+  session id: <%= session.id %>
+  <div id="location">
+  ...
+</div>

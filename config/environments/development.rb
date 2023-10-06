@@ -2,6 +2,10 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
 
+config.hosts << "curly-items-boil.loca.lt"
+config.web_console.permissions = '85.62.201.162'
+
+
 config.session_store :redis_session_store,
   serializer: :json,
   on_redis_down: ->(*a) { Rails.logger.error("Redis down! #{a.inspect}") },

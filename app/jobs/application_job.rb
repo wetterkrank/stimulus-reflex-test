@@ -1,6 +1,7 @@
 class ApplicationJob < ActiveJob::Base
+  include CableReady::Broadcaster
+  delegate :render, to: :ApplicationController
 
-    include CableReady::Broadcaster
   # Automatically retry jobs that encountered a deadlock
   # retry_on ActiveRecord::Deadlocked
 

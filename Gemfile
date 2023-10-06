@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "dotenv-rails"
 end
 
 group :development do
@@ -76,3 +77,11 @@ gem "stimulus_reflex", "= 3.5.0.rc2"
 gem "action-cable-redis-backport", "~> 1"
 
 gem "redis-session-store", "~> 0.11.5"
+
+gem "geocoder"
+
+gem "dockerfile-rails", ">= 1.5", :group => :development
+
+gem "sentry-ruby", "~> 5.11"
+
+gem "sentry-rails", "~> 5.11"
